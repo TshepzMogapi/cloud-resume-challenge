@@ -22,6 +22,7 @@ jobs:
         with:
           path: 'public/'
           destination: '${{ secrets.GCS_BUCKET }}'
+          parent: false
 
 
 
