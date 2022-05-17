@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #66d0ff;
+}
+
+header {
+  overflow: hidden;
+}
+
+#t-header {
+  height: 80px;
+  display: flex;
+}
+
+.text-logo {
+  display: flex;
+  margin: auto 12px;
+}
+
+.text-logo span {
+  margin: auto 4px;
+}
+
+#t-logo {
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.container {
+  margin: 0px auto;
+  width: 1200px;
+}
+
+.t-nav {
+  width: 100%;
+}
+
+#t-menu {
+  float: right;
+}
+
+#t-menu ul {
+  text-align: center;
+  float: right;
+}
+
+#t-menu li {
+  display: inline-block;
+}
+
+#t-menu li a,
+#t-menu li span {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+#t-menu li:hover a {
+  color: green;
+}
+
+.abt-crc {
+  display: flex;
+  width: 100%;
+}
+
+.abt-crc .crc-one {
+  width: 50%;
+  margin: auto;
+
+}
+
+.abt-crc .crc-two {
+  margin: auto;
+}
+
+.cloud-animation {
+  margin-top:70px;
+  width:350px;
+  height:120px;
+  background:#ECEFF1;
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
+  border-radius:100px;
+}
+
+.cloud-animation::after, .cloud-animation::before {
+  content:"";
+  position:relative;
+  display:inline-block;
+  background:inherit;
+  border-radius:inherit;
+}
+
+.cloud-animation::after{
+  width:100px;
+  height:100px;
+  top:-120px;
+  left:-100px;
+}
+
+.cloud-animation::before{
+  width:180px;
+  height:180px;
+  top: -70px;
+  left:130px;
+}
+
+
+
