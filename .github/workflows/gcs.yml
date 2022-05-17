@@ -3,6 +3,8 @@ on:
   push:
     branches:
     - main
+    paths:
+    - public/**
 
 jobs:
   upload-2-gcs:
