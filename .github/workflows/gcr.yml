@@ -7,7 +7,7 @@ on:
     - api/**
 
 jobs:
-  upload-2-gcs:
+  deploy-2-gcr:
     runs-on:  ubuntu-latest
 
     steps:
@@ -22,6 +22,16 @@ jobs:
       - uses: 'google-github-actions/setup-gcloud@v0'
         name: gcloud sdk set up
       
+      - name: Build and Publish
+        run: |
+          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCR_SERVICE }}
+
+      - uses: 'google-github-actions/deploy-cloudrun@v0'
+        name: deploy to cloud run
+        with:
+          service: ${{ secrets.GCR_SERVICE }}
+          image: gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCR_SERVICE }}
       
+
 
       
