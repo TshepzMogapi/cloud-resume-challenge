@@ -1,0 +1,27 @@
+name: GCP Cloud Run
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - api/**
+
+jobs:
+  upload-2-gcs:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+
+      - uses: google-github-actions/auth@v0
+        name: gcloud auth
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+      
+      - uses: 'google-github-actions/setup-gcloud@v0'
+        name: gcloud sdk set up
+      
+      
+
+      
