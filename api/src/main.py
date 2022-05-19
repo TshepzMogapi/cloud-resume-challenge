@@ -1,8 +1,11 @@
+
 from fastapi import FastAPI, Request
+import logging
+
 
 app = FastAPI()
 
 @app.get("/")
 async def read_root(request: Request):
-    print(f"Request = {request.client.host}")
+    logging.info(f'Incoming visitor from {request.client.host}')
     return {"Hello there visitor from": request.client.host}
