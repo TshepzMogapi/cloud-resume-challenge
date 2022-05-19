@@ -24,7 +24,7 @@ jobs:
       
       - name: Build and Publish
         run: |
-          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCR_SERVICE }}
+          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCR_SERVICE }} api/
 
       - uses: 'google-github-actions/deploy-cloudrun@v0'
         name: deploy to cloud run
