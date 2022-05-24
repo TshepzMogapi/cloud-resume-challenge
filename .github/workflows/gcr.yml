@@ -29,7 +29,7 @@ jobs:
       - uses: 'google-github-actions/deploy-cloudrun@v0'
         name: deploy to cloud run
         with:
-          service: ${{ secrets.GCR_SERVICE }}
+          service: ${{ secrets.GCR_SERVICE }}-2
           image: gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCR_SERVICE }}
       
 
